@@ -1,12 +1,13 @@
 <html>
+<head>
   <script>
+    var dataLayer=[]
     function triggerEvent(){
       var obj = {'event':'analyticsEvent','action':'buttonclick'};
-      obj['value'] = $('#valuefield').value;
+      obj['value'] = document.getElementById('valuefield').value;
       dataLayer.push(obj);
     }
   </script>
-<head>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -20,9 +21,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGZK237"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<h1>Super fancy web-page</h1>
-<p>this is some text that maybe is interesting to someone </p>
 
+  <h1>Super fancy web-page</h1>
+<p>this is some text that maybe is interesting to someone </p>
   <a href="page2.html">subpage</a>
   <hr>
   <input id="valuefield"><br>
